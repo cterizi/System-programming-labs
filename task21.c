@@ -7,25 +7,6 @@ int main(){
 	int table[] = {2,5,4,3,7};
 	int i, a, b, size;
 
-	/*for(i = 0; i < 5; i++){
-		printf("%d \n", table[i]);
-	}
-	printf("---------\n");
-	int t ;
-	t = compare(4,3);
-	printf("---------\n");
-	printf("%d\n", t);
-	t = compare (4,4);
-	printf("---------\n");
-	printf("%d\n", t);
-	t = compare(3,7);
-	printf("---------\n");
-	printf("%d\n", t);*/
-	/*a = 3;
-	b = 4;
-	printf("a = %d, b = %d \n", a, b);
-	swap(&a, &b);
-	printf("a = %d, b = %d \n", a, b);*/
 	size = sizeof(table) / sizeof(int);
 	bubblesort(table, size);
 	for(i = 0; i < 5; i++){
