@@ -8,11 +8,10 @@ int main(){
 	
 	//pa = &table[0];
 	//printf("%d\n", pa);
-	value = 5;
+	value = 0;
 	size = sizeof(table) / sizeof(int);
 	pa = search(table, size, value);
-	printf("%d\n", pa);
-	if(pa != NULL){
+	if(!NULL){
 		//printf("%d\n", *pa);
 		//printf("%d\n", pa);
 		printf("To stoixeio %d vrisketai ston pinaka kai h dieythhnsh tou einai %d\n", *pa, pa);
@@ -31,7 +30,6 @@ int * search(int a[], int size, int number){
 	for(i = 0; i < size; i++){
 		if(a[i] == number){
 			pa = pa + i; 
-			printf("%d\n", pa);
 			return pa; 
 		}
 	}
