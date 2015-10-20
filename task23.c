@@ -11,7 +11,7 @@ int main(){
 	value = 0;
 	size = sizeof(table) / sizeof(int);
 	pa = search(table, size, value);
-	printf("pa = %d\n", pa);
+	//printf("pa = %d\n", pa);
 	if(pa != NULL){
 		//printf("%d\n", *pa);
 		//printf("%d\n", pa);
@@ -31,7 +31,7 @@ int * search(int a[], int size, int number){
 	for(i = 0; i < size; i++){
 		if(a[i] == number){
 			pa = pa + i; 
-			printf("pa = %d\n", pa);
+			//printf("pa = %d\n", pa);
 			return pa; 
 		}
 	}
