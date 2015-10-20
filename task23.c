@@ -8,7 +8,7 @@ int main(){
 	
 	//pa = &table[0];
 	//printf("%d\n", pa);
-	value = 5;
+	value = 0;
 	size = sizeof(table) / sizeof(int);
 	pa = search(table, size, value);
 	printf("pa = %d\n", pa);
