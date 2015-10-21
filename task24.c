@@ -2,40 +2,36 @@
 void numincr(char *, int);
 
 int main(){
-	char symbols[] = {'a', '2', '4', 'q', 'r', '\0'};
-	int size, i;
-	char *p;
+	char symbols[] = "af298h";
+	int size, i, count;
+	char *p, *w;
 
-	//p = NULL;
-	p = &symbols[0];
-	printf("p = %d\n", p);
+	p = symbols;
+	w = symbols;
 	size = sizeof(symbols) / sizeof(char);
-	//printf("size = %d\n", size);
+	count = 0;
 	for(i = 0; i < size; i++){
-		printf("%c", symbols[i]);
+		if(*w >= '0' && *w <= '8'){
+			count = count + 1;
+		}
+		w = w + 1;	
 	}
-	printf("\n");
-	numincr(&p, 2);
-	/*for(i = 0; i < size; i++){
-		printf("%c", symbols[i]);
-	}*/
+	printf("%s -> ", symbols);
+	numincr(p, count);
+	printf("%s\n", symbols);
 	return 0;
 }
 
-void numincr(char *i, int n){
+void numincr(char *i, int n){	
 	int count;
-	//char *i;
-	
-	//i = *p;
+
 	count = 0;
-	printf("%d\n", i);
-	/*while(count < n){
-		if(*p >= '0' && *p <= '8'){
-			*p = *p + 1;
-			printf("%c\n", *p);
+	while(count < n){
+		if(*i >= '0' && *i <= '8'){
+			*i = (char)(((int)*i) + 1);
 			count = count + 1;
-			p = p + 1;
 		}
-	}*/
+		i = i + 1;
+	}
 	return;
 }
