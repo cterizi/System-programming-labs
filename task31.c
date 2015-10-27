@@ -25,7 +25,7 @@ void search(int a[], int size, int number, int **pointer){
   *pointer = NULL;
 	for(i = 0; i < size; i++){
 		if(a[i] == number){
-			*pointer = &(a[2]); 
+			*pointer = &(a[i]); 
 		}
 	}
 	return;
