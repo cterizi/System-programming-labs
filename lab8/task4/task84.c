@@ -26,7 +26,7 @@ int main(){
 		//child, write to pfd2, close read pfd2, sum, avg
 		close(pfd1[1]);
 		close(pfd2[0]);
-		while((n = read(pfd1[0], &number, sizeof(int))) <= 0){
+		while((n = read(pfd1[0], &number, sizeof(int))) >= 0){
 			if(n == 0){
 				break;
 			}
